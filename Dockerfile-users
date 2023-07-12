@@ -1,0 +1,9 @@
+FROM postgres:latest
+
+ENV POSTGRES_USER jcueva
+ENV POSTGRES_PASSWORD 2425
+ENV POSTGRES_DB ProyectoUsers
+
+COPY init-users.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 5432
